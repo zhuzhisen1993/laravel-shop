@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\UserAddress;
 
 class User extends Authenticatable
 {
@@ -30,4 +31,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function addresses(){
+        return $this->hasMany(UserAddress::class);
+    }
+
 }
