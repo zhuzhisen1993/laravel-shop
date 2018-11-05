@@ -3,12 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Product;
 
 class ProductSku extends Model
 {
     protected $fillable = ['title','description','price','stock'];
 
     public function product(){
-        return $this->belongsTo(\App\Models\ProductSku::class);
+        return $this->belongsTo(Product::class);
     }
 }
