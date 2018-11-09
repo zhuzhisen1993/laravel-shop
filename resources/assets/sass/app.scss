@@ -380,6 +380,7 @@ body {
       }
     }
     border-right: 1px solid #ddd;
+
   }
   .order-summary {
     width: 50%;
@@ -398,5 +399,11 @@ body {
     margin-top: 10px;
     padding-right: 10px;
   }
+
+  .payment-buttons, .receive-button {
+    margin-top: 10px;
+    padding-right: 10px;
+  }
+
 }
 
