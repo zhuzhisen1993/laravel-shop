@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\Orderpaid;
 use Illuminate\Http\Request;
 use App\Models\Order;
 use App\Exceptions\InvalidRequestException;
@@ -62,7 +63,14 @@ class PaymentController extends Controller
             'payment_no'     => $data->trade_no, // 支付宝订单号
         ]);
 
+        $this->afterPaid($order);
+
         return app('alipay')->success();
     }
+
+    public function afterPaid(Order $order){
+        event(new Orderpaid($order));
+    }
+
 
 }
