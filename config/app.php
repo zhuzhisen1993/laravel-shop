@@ -54,6 +54,9 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    /*延迟任务*/
+    'order_ttl' => 1800,
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
