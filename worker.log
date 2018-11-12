@@ -2598,3 +2598,5 @@ In SqsConnector.php line 26:
 [2018-11-09 15:27:47] Processed:  App\Listeners\SendOrderPaidMaill
 [2018-11-09 15:50:34] Processing: App\Jobs\CloseOrder
 [2018-11-09 15:50:34] Processed:  App\Jobs\CloseOrder
+[2018-11-12 11:12:26] Processing: App\Jobs\CloseOrder
+[2018-11-12 11:12:27] Processed:  App\Jobs\CloseOrder
