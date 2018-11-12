@@ -27,9 +27,9 @@
                                         </a>
                                     </div>
                                     <div>
-            <span class="product-title">
-               <a target="_blank" href="{{ route('products.show', [$item->product_id]) }}">{{ $item->product->title }}</a>
-             </span>
+                                        <span class="product-title">
+                                           <a target="_blank" href="{{ route('products.show', [$item->product_id]) }}">{{ $item->product->title }}</a>
+                                         </span>
                                         <span class="sku-title">{{ $item->productSku->title }}</span>
                                     </div>
                                 </td>
@@ -90,6 +90,13 @@
                                     @endif
                                 </div>
                             </div>
+
+                            @if(isset($order->extra['refund_disagree_reason']))
+                                <div>
+                                    <span>拒绝退款理由：</span>
+                                    <div class="value">{{ $order->extra['refund_disagree_reason'] }}</div>
+                                </div>
+                            @endif
 
                             <!-- 支付按钮开始 -->
                             @if(!$order->paid_at && !$order->closed)
